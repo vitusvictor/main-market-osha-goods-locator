@@ -1,38 +1,503 @@
-.App {
+:root{
+  
+  font-size: 10px;
+  --bgBlue: rgb(23, 95, 177);
+  --txtWhite: #fff;
+  --txtBlack: #000;
+  --black: #000;
+}
+
+body{
+  width: 100%;
+}
+
+
+.header{
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 3.5rem;
+  padding: 2rem 4rem 2rem 4rem;
+}
+
+.headerFooter{
+  background-color: var(--bgBlue);
+  text-align: center;
+  color: var(--txtWhite);
+}
+
+.bg-container{
+  width: 100%;
+  display: -webkit-box; 
+  display: -ms-flexbox;
+  display: -webkit-flex; 
+  display: flex;
+  justify-content: center;
+}
+
+.bg-image{
+  background: linear-gradient(rgba(20, 20, 20, 0.8), rgba(20, 20, 20, 0.9)), url('../public/Nigerian-Market.jpg');
+  overflow: hidden;
+}
+
+.overlay{
+  opacity: 0.8;
+  max-width: 1055px;
+}
+
+.date{
+  color: #fff;
+  text-align: end;
+  padding-top: 2%;
+  padding-right: 18%;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.grid-wrapper{
+  margin-top: 10vh;
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 40vh;
+  justify-items: center;
+}
+
+.search-area{
+  width: 60%;
+}
+
+.input-div{
+  height: 70px;
+  width: 100%;
+  border: var(--bgBlue) solid 3px;
+  border-radius: 3px;
+}
+
+.search-bar{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.search-results-div{
+  background-color: #fff;
+  max-height: 32vh;
+  overflow-x: hidden;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.notice{
+  color: rgb(255, 0, 0);
+  font-style: italic;
+  padding: 1rem;
+  font-size: 1.4rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.returnedSearchItem{
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: rgb(202, 201, 201);
+  border-bottom: #fff 1px solid;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.returnedSearchItem:hover{
+  background-color: rgb(158, 157, 157);
+  -webkit-transform: scale(1.05, 1.05);
+  -ms-transform: scale(1.05, 1.05);
+  transform: scale(1.05, 1.05);
+  font-size: 1.8rem;
+}
+
+.find-by-location{
+  width: 100%;
+}
+
+.find-by-location-div{
+  width: 70%;
+}
+
+.find-btn{
+  padding: 10px;
+  display: block;
+  width: 100%;
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+.find-by-location-div:hover{
+  transform: scale(1.05, 1.05);
+}
+
+h2{
+  font-size: 2.5rem;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.about{
+  background-color: #fff;
+  margin-top: 6rem;
+  margin-right: 10vw;
+  margin-left: 10vw;
+  padding: 1rem 2rem 1rem 2rem;
+}
+
+.about>p{
+  margin-top: 1rem;
+  font-size: 1.6rem;
+  text-align: justify;
+}
+
+.luckily{
+  background-color: rgb(222, 222, 250);
+  padding: 10px;
+}
+
+.hr{
+  margin-top: 20px;
+  background-color: #fff;
+  margin-right: 10vw;
+  margin-left: 10vw;
+}
+
+.contact-paragraph{
+  margin-right: 10vw;
+  margin-left: 10vw;
+  min-height: 125px;
+  margin-top: 1rem;
+  font-size: 1.6rem;
+  background-color: #fff;
+  padding: 1rem 2rem 1rem 2rem;
+}
+
+
+.bg{
+  background-color: var(--bgBlue);
+  padding: 6rem 3rem;
+}
+
+.catItem{
+  margin: 0.4rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.catItem:hover{
+  cursor: pointer;
+}
+
+.catItem:focus{
+  background-color: rgb(206, 226, 243);
+}
+
+.popular{
+  display: block;
+  background-color: rgb(131, 190, 241);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bolder;
+  border-radius: 0.5rem;
+  width: 60%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.cat-items-div{
+  margin-top: 1rem;
+  max-height: 30vh;
+  overflow: scroll;
+  overflow-x: hidden;
+  border: 2px dashed rgb(194, 193, 193);
+  padding: 1rem;
+}
+
+.popular:hover{
+  background-color: rgb(206, 226, 243);
+  cursor: pointer;
+}
+
+.hashTagsContainer{
+  margin-bottom: 1rem;
+}
+
+.bg{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.locationsAndItems{
+  padding: 3rem;
+  background-color: #fff;
+  max-width: 1000px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.wrapper{
+  margin-top: 1.3rem;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.s-area{
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  background-image: linear-gradient(to right, rgb(186, 220, 250), white, white, rgb(186, 220, 250));
+}
+
+.returnedItem{
+  display: inline-block;
+  padding: 0.4rem;
+  margin: 0.2rem;
+}
+
+.i-div{
+  height: 3rem;
+}
+
+.i-bar{
+  display: block;
+  width: 50%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.results-div{
+  background-color: rgb(245, 243, 240);
+  padding: 1rem; 
+}
+
+.results-div-none{
+  display: none;
+}
+
+.topResults{
+  font-size: 1.4rem;
+}
+
+
+.container{
+  margin-bottom: 3rem;
+  border-style: ridge;
+  margin-top: 0.5rem;
+  padding: 2rem;
+}
+
+.eachItem{
+  display: inline-block;
+  background-color: antiquewhite;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  margin: 1rem 1rem 1rem 0;
+}
+
+.heading{
+  background-color: rgb(206, 226, 243);
+  display: inline-block;
+  padding: 0.9rem;
+  border-radius: 0.5rem;
+  font-size: 2rem;
+}
+
+
+.categories{
+  background-color: rgb(206, 226, 243);
+  display: inline-block;
+  padding: 0.9rem;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.upwardArrow{
+  display: inline-block;
+  position: fixed;
+  top: 80vh;
+  right: 1rem;
+  text-align: center;
+  border-radius: 1rem;
+  font-weight: bold;
+  background-color: rgb(136, 183, 245);
+  box-shadow: -3px 5px 5px rgb(117, 114, 114);
+}
+
+.arrow{
+
+}
+
+.goTop{
+  display: inline-block;
+  padding: 1.3rem;
+  font-size: 1.4rem;
+}
+
+.goTop:hover{
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px){ 
+  
+  .grid-wrapper{
+    display: block;
   }
-  to {
-    transform: rotate(360deg);
+
+  .date{
+    color: #fff;
+    text-align: end;
+    padding-top: 2%;
+    padding-right: 10%;
+    font-size: 1.2rem;
+  }
+  .search-area{
+    width: 100%;
+    min-height: 20vh;
+  }
+  
+  .input-div{
+    margin: 0 auto 0 auto;
+    height: 50px;
+    width: 50%;
+    border: var(--bgBlue) solid 3px;
+    border-radius: 3px;
+    background-color: blue;
+  }
+  
+  .search-bar{
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  
+  .search-results-div{
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    max-height: 30vh;
+  }
+
+  .notice{
+    font-size: 1.2rem;
+  }
+
+  .returnedSearchItem{
+    font-size: 1.3rem;
+  }
+
+  .returnedSearchItem:hover{
+    font-size: 1.5rem;
+  }
+  
+  .find-by-location{
+    margin-top: 10px;
+    padding: 10px;
+  }
+  
+  .find-by-location-div{
+    width: 50%;
+    max-height: 60px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  .find-btn{
+    height: 100%;
+    font-size: 1.5rem;
+  }
+
+  .returnedItem{
+    font-size: 1rem;
+  }
+
+  .heading{
+    font-size: 1.5rem;
+  }
+
+  .eachItem{
+    font-size: 1rem;
+    margin: 0.5rem 0.5rem 0.5rem 0;
+  }
+
+  .categories{
+    font-size: 1rem;
+  }
+
+  .upwardArrow{
+    display: inline-block;
+    right: 0.5rem;
+    text-align: center;
+    font-weight: normal;
+    background-color: rgb(136, 183, 245);
+    box-shadow: -3px 5px 5px rgb(117, 114, 114);
+  }
+
+  .goTop{
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  h2{
+    font-size: 2rem;
+  }
+
+  .commonlySearched{
+    margin-top: 2rem;
+  }
+  
+  .commonly-searched-paragraph{
+    margin-top: 1rem;
+    font-size: 1.6rem;
+  }
+
+  .sliddingItem{
+    font-size: 1.3rem;
+  }
+ 
+  .about{
+
+  }
+  
+  .about>p{
+    margin-top: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .hr{
+    margin-top: 20px;
+    background-color: #fff;
+  }
+
+  .contact{
+    margin-bottom: 10px;
+  }
+
+  .contact-paragraph{
+    font-size: 1.2rem;
+  }
+
+  .popular{
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 300px){
+  :root{
+    font-size: 8px;
+  }
+}
+
+@media only screen and ( width: 720px) and (height: 1480px){
+  :root{
+    font-size: 14px;
+  }  
+  .search-area{
+    min-height: 28vh;
   }
 }
