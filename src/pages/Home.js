@@ -129,7 +129,7 @@ const Home = () => {
                         <hr className='hr'/>
                         <p className='contact-paragraph'>
                         <br/>
-                            <h2>Contact use at:</h2>
+                            <h2>Contact us at:</h2>
                             <br/>
                             <strong>Address:</strong> Hotel Marina, Main Market Onitsha, Anambra State.<br/>
                             <strong>Email:</strong> mainmarketosha@gmail.com<br/>
